@@ -1,6 +1,6 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -51,7 +51,7 @@ header nav p {
 }
 
 header nav a:any-link {
-  color: currentcolor;
+  color: var(--muted);
 }
 
 /* hamburger */
@@ -60,6 +60,11 @@ header nav .nav-hamburger {
   height: 22px;
   display: flex;
   align-items: center;
+  background: radial-gradient(1400px 500px at 10% -10%, rgba(107, 209, 255, 0.08), transparent 40%), radial-gradient(800px 400px at 100% -40%, rgba(156, 123, 255, 0.07), transparent 60%), var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 10px;
 }
 
 header nav .nav-hamburger button {
@@ -73,6 +78,9 @@ header nav .nav-hamburger button {
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
+  background: radial-gradient(1400px 500px at 10% -10%, rgba(107, 209, 255, 0.08), transparent 40%), radial-gradient(800px 400px at 100% -40%, rgba(156, 123, 255, 0.07), transparent 60%), var(--panel);
+  
+      
 }
 
 header nav .nav-hamburger-icon,
@@ -161,6 +169,9 @@ header nav[aria-expanded='true'] .nav-sections {
   display: block;
   visibility: visible;
   align-self: start;
+
+  background: linear-gradient(180deg,#070b18 0%, #0b1020 40%, #0f1430 100%);
+  padding: 20px;
 }
 
 header nav .nav-sections ul {
@@ -222,6 +233,7 @@ header nav .nav-sections ul > li > ul > li {
     display: flex;
     gap: 24px;
     margin: 0;
+    justify-content: end;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
@@ -243,6 +255,9 @@ header nav .nav-sections ul > li > ul > li {
     padding: 16px;
     background-color: var(--light-color);
     white-space: initial;
+    background: radial-gradient(1400px 500px at 10% -10%, rgba(107,209,255,0.08), transparent 40%),
+                  radial-gradient(800px 400px at 100% -40%, rgba(156,123,255,0.07), transparent 60%),
+                  var(--panel);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
@@ -255,6 +270,7 @@ header nav .nav-sections ul > li > ul > li {
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 8px solid var(--light-color);
+    border-bottom: 8px solid #1d2747;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
@@ -265,4 +281,5 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  display: none;
 }

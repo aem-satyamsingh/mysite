@@ -10,6 +10,10 @@
 .cards > ul > li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
+      padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(18, 24, 51, 0.7);
 }
 
 .cards .cards-card-body {
